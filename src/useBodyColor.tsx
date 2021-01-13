@@ -14,7 +14,7 @@ export const useBodyColor = (initialValue: string = "#fff"): IValue => {
     }, [])
 
     React.useEffect(() => {
-        const clippedBrightness = 100 * ((brightness * 0.3) + 0.5)
+        const clippedBrightness = 100 * ((brightness * 0.3) + 0.6)
         const desaturation = 1 - ((brightness * 0.5))
         document.body.style.backgroundColor = Color(color).lightness(clippedBrightness).desaturate(desaturation).hex()
     }, [color, brightness])
